@@ -1,5 +1,41 @@
 #!/bin/sh
 
-stow git
-stow zsh
-stow sublime
+echo "Starting installation..."
+
+command -v "brew" >/dev/null 2>&1
+if [[ $? != 0 ]] ; then
+  echo "Install Homebrew"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# import brew related taps, casks, etc.
+# echo "Importing Brewfile..."
+# TODO: look into brewfile setup
+# echo "Brewfile import and install complete!"
+
+# echo "Installing git..."
+# brew install git
+# echo "git install complete!"
+
+# echo "Installing postgres..."
+# brew install postgres
+# echo "postgres install complete!"
+
+# echo "Install Sublime Text"
+# brew cask install sublime-text
+# echo "sublime install complete!"
+
+# echo "Install iTerm2"
+# brew cask install iterm2
+# echo "iTerms2 install complete!"
+
+# echo "Install zsh"
+# brew install zsh zsh-completions
+# chsh -s $(which zsh)
+# echo "zsh install complete!"
+
+stow --ignore ".DS_Store" git
+stow --ignore ".DS_Store" zsh
+stow --ignore ".DS_Store" sublime
+
+echo "Install Complete!"
