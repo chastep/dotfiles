@@ -8,26 +8,42 @@ if [[ $? != 0 ]] ; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# HOMEBREW
+
 # import brew related taps, casks, etc.
 # echo "Importing Brewfile..."
 # TODO: look into brewfile setup
 # echo "Brewfile import and install complete!"
 
+# GIT
+
 # echo "Installing git..."
 # brew install git
 # echo "git install complete!"
+
+# POSTGRES
 
 # echo "Installing postgres..."
 # brew install postgres
 # echo "postgres install complete!"
 
+# SUBLIME TEXT
+
 # echo "Install Sublime Text"
 # brew cask install sublime-text
 # echo "sublime install complete!"
 
+# ITERM2
+
 # echo "Install iTerm2"
 # brew cask install iterm2
 # echo "iTerms2 install complete!"
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2/"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+# OH-MY-ZSH
 
 # echo "Install zsh"
 # brew install zsh zsh-completions
