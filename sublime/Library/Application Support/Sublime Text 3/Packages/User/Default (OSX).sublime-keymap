@@ -1,5 +1,6 @@
 [
   { "keys": ["alt+c"], "command": "insert_snippet", "args": { "contents": "console.log(${1:}$SELECTION);${0}" } },
   { "keys": ["alt+d"], "command": "insert_snippet", "args": { "contents": "debugger;" } },
-  { "keys": ["alt+b"], "command": "insert_snippet", "args": { "contents": "binding.pry" } }
+  { "keys": ["alt+b"], "command": "insert_snippet", "args": { "contents": "binding.pry" } },
+  { "keys": ["ctrl+alt+e"], "command": "eslint"}
 ]
