@@ -1,0 +1,22 @@
+#!/bin/sh
+
+echo "Updating..."
+
+command -v "brew" >/dev/null 2>&1
+if [[ $? != 0 ]] ; then
+  echo "Homebrew isn't installed. Please run `install` script..."
+  exit 1
+else
+  echo "Update Homebrew"
+  brew update
+
+  echo "Upgrade software"
+  brew upgrade
+
+  echo "Clean-up software"
+  brew cleanup
+fi
+
+stow --ignore ".DS_Store" git
+stow --ignore ".DS_Store" zsh
+stow --ignore ".DS_Store" sublime
