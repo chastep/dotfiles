@@ -122,10 +122,10 @@ alias docker-test-reload="dcrun -e RAILS_ENV=test web bundle exec rake db:reload
 alias gdevp-rb="gco dev && git pull && gco - && git rebase -i dev"
 alias gamend="git commit --amend --no-edit"
 
-# Rspec shortcut
-alias rspec="be rspec"
+# Postgres aliases
+alias opsql='PGPASSWORD=opternative psql -h localhost -U opternative opternative_development'
 
-# Google Shortcuts
+# Google shortcut
 alias sync="open -na 'Google Chrome' --args --new-window --incognito 'http://localhost:5000/sync'"
 
 export NVM_DIR="$HOME/.nvm"
