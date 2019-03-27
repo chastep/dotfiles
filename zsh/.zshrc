@@ -116,6 +116,7 @@ alias docker-old-file="dcrun web bundle exec rake db:restore:file["tmp/database/
 alias docker-restore="dc stop && dc rm -f && ds stop && ds clean && dc build && ds start && docker-old-file"
 alias docker-new-sync="dc stop && dc rm -f && ds stop && ds clean && dc build && ds start && dcrun web bundle exec rake db:restore:s3[staging] && dcrun web bundle exec rake db:migrate && dc up -d"
 alias docker-new-npm="ds stop && ds clean && dc down && dcrun web npm install && docker-mig-sync"
+alias docker-old-file="dcrun web bundle exec rake db:restore:s3[staging] && dcrun web bundle exec rake db:migrate && dc up -d"
 alias docker-test-reload="dcrun -e RAILS_ENV=test web bundle exec rake db:reload"
 
 # Git aliases
