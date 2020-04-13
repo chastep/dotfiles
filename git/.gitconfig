@@ -1,5 +1,13 @@
 [user]
-  name = Chase Stephens
-  email = chasestephens92@gmail.com
+	name = Chase Stephens
+	email = chasestephens92@gmail.com
 [core]
-  excludesfile = ~/.global-gitignore
+	excludesfile = /Users/chase/.global-gitignore
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/chase/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/chase/.stCommitMsg
