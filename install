@@ -53,5 +53,6 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 stow --ignore ".DS_Store" git
 stow --ignore ".DS_Store" zsh
 stow --ignore ".DS_Store" sublime
+stow --ignore ".DS_Store" vscode
 
 echo "Install Complete!"
