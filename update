@@ -20,3 +20,4 @@ fi
 stow --ignore ".DS_Store" git
 stow --ignore ".DS_Store" zsh
 stow --ignore ".DS_Store" sublime
+stow --ignore ".DS_Store" vscode
