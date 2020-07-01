@@ -1,0 +1,294 @@
+{
+	"name": "vscode-random",
+	"displayName": "vscode-random",
+	"description": "Generates random data directly into VS Code",
+	"icon": "images/vscode-random-icon.png",
+	"version": "1.7.0",
+	"publisher": "jrebocho",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jrebocho/vscode-random.git"
+	},
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.resetSeed",
+		"onCommand:extension.randomByte",
+		"onCommand:extension.randomShort",
+		"onCommand:extension.randomInt",
+		"onCommand:extension.randomLong",
+		"onCommand:extension.randomIntCustomRange",
+		"onCommand:extension.randomGuid",
+		"onCommand:extension.randomStringCustomLength",
+		"onCommand:extension.randomSampleFromInput",
+		"onCommand:extension.randomName",
+		"onCommand:extension.randomStreetAddress",
+		"onCommand:extension.randomCity",
+		"onCommand:extension.randomCountryCode",
+		"onCommand:extension.randomCountryName",
+		"onCommand:extension.randomPhoneNumber",
+		"onCommand:extension.randomEmail",
+		"onCommand:extension.randomIP",
+		"onCommand:extension.randomIPv6",
+		"onCommand:extension.randomUrl",
+		"onCommand:extension.randomHexColor",
+		"onCommand:extension.randomRgbColor",
+		"onCommand:extension.randomIban"
+	],
+	"main": "./build/extension",
+	"contributes": {
+		"configuration": {
+			"properties": {
+				"vscodeRandom.contextMenu.enabled": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enables the context menu for vscode-random"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.resetSeed",
+				"title": "Random: Reset seed"
+			},
+			{
+				"command": "extension.randomByte",
+				"title": "Random: Byte"
+			},
+			{
+				"command": "extension.randomShort",
+				"title": "Random: Short"
+			},
+			{
+				"command": "extension.randomInt",
+				"title": "Random: Integer"
+			},
+			{
+				"command": "extension.randomLong",
+				"title": "Random: Long"
+			},
+			{
+				"command": "extension.randomIntCustomRange",
+				"title": "Random: Integer (custom range)"
+			},
+			{
+				"command": "extension.randomGuid",
+				"title": "Random: Guid"
+			},
+			{
+				"command": "extension.randomStringCustomLength",
+				"title": "Random: String (custom length)"
+			},
+			{
+				"command": "extension.randomSampleFromInput",
+				"title": "Random: Sample (from input)"
+			},
+			{
+				"command": "extension.randomName",
+				"title": "Random: Name"
+			},
+			{
+				"command": "extension.randomStreetAddress",
+				"title": "Random: Street Address"
+			},
+			{
+				"command": "extension.randomCity",
+				"title": "Random: City"
+			},
+			{
+				"command": "extension.randomCountryCode",
+				"title": "Random: Country code"
+			},
+			{
+				"command": "extension.randomCountryName",
+				"title": "Random: Country name"
+			},
+			{
+				"command": "extension.randomPhoneNumber",
+				"title": "Random: Phone number"
+			},
+			{
+				"command": "extension.randomEmail",
+				"title": "Random: Email"
+			},
+			{
+				"command": "extension.randomIP",
+				"title": "Random: IP"
+			},
+			{
+				"command": "extension.randomIPv6",
+				"title": "Random: IPv6"
+			},
+			{
+				"command": "extension.randomUrl",
+				"title": "Random: Url"
+			},
+			{
+				"command": "extension.randomHexColor",
+				"title": "Random: Color (Hexadecimal)"
+			},
+			{
+				"command": "extension.randomRgbColor",
+				"title": "Random: Color (RGB)"
+			},
+			{
+				"command": "extension.randomIban",
+				"title": "Random: IBAN"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.randomByte",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomShort",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomInt",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomLong",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomIntCustomRange",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomGuid",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomStringCustomLength",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomSampleFromInput",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomName",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomStreetAddress",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomCity",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomCountryCode",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomCountryName",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomPhoneNumber",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomEmail",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomIP",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomIPv6",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomUrl",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomHexColor",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomRgbColor",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				},
+				{
+					"command": "extension.randomIban",
+					"when": "editorHasSelection && config.vscodeRandom.contextMenu.enabled",
+					"group": "vscode-random"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"compile": "rimraf build & babel src --out-dir build",
+		"test": "jest",
+		"test:watch": "jest --watch"
+	},
+	"jest": {
+		"testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.js?$"
+	},
+	"standard": {
+		"globals": [
+			"describe",
+			"it",
+			"expect",
+			"jest",
+			"beforeEach"
+		]
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.10.3",
+		"@babel/core": "^7.10.3",
+		"@babel/polyfill": "^7.10.1",
+		"@babel/preset-env": "^7.10.3",
+		"babel-core": "^7.0.0-bridge.0",
+		"babel-jest": "^26.1.0",
+		"eslint": "^7.3.1",
+		"jest": "^26.1.0",
+		"rimraf": "^3.0.2",
+		"standard": "^14.3.4"
+	},
+	"dependencies": {
+		"chance": "^1.1.6"
+	},
+	"resolutions": {
+		"**/event-stream": "^4.0.1"
+	},
+	"__metadata": {
+		"id": "a4678ccd-2309-4cdd-b6cf-94af8dd7001f",
+		"publisherId": "4081ae01-a71e-4225-9b06-9dd59fe64e59",
+		"publisherDisplayName": "Jorge Rebocho"
+	}
+}
