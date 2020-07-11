@@ -2,7 +2,34 @@
 
 # Visual Studio Code :: Package list
 # code --list-extensions
-pkglist=()
+pkglist=(
+bung87.vscode-gemfile
+dbaeumer.vscode-eslint
+eamodio.gitlens
+ecmel.vscode-html-css
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
+HookyQR.beautify
+jrebocho.vscode-random
+ms-azuretools.vscode-docker
+ms-vscode.sublime-keybindings
+nathanchapman.JavaScriptSnippets
+pkosta2005.heroku-command
+pnp.polacode
+rebornix.ruby
+sianglim.slim
+streetsidesoftware.code-spell-checker
+Tyriar.lorem-ipsum
+vscode-icons-team.vscode-icons
+wingrunr21.vscode-ruby
+xabikos.JavaScriptSnippets
+xabikos.ReactSnippets
+CraigMaslowski.erb
+abusaidm.html-snippets
+ms-python.python
+sidthesloth.html5-boilerplate
+swyphcosmo.spellchecker
+)
 
 for i in ${pkglist[@]}; do
   code --install-extension $i
