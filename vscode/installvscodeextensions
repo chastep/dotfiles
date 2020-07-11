@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Visual Studio Code :: Package list
+# code --list-extensions
+pkglist=()
+
+for i in ${pkglist[@]}; do
+  code --install-extension $i
+done

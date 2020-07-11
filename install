@@ -4,7 +4,9 @@ echo "Setting up your Mac..."
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
+  echo "Installing Homebrew..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "Homebrew Installed!"
 fi
 
 # Update Homebrew recipes
@@ -14,22 +16,29 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-# Create a Projects directory
-mkdir $HOME/Projects
+# Create a workspace directory
+mkdir $HOME/workspace
 
 # GIT
 # Removes .gitconfig and .globabl-gitignore from $HOME (if it exists) and symlinks the files from the .dotfiles
 rm -rf $HOME/.gitconfig
 rm -rf $HOME/.global-gitignore
+touch $HOME/.gitconfig
+touch $HOME/.global-gitignore
 stow --ignore ".DS_Store" git
 
-# ZSH
-# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
+# OH-MY-ZSH
 rm -rf $HOME/.zshrc
+touch $HOME/.zshrc
+chsh -s /usr/local/bin/zsh
 stow --ignore ".DS_Store" zsh
 
 # SUBLIME
 stow --ignore ".DS_Store" sublime
+
+# VSCODE
+ln -s /Users/chasestephens/.dotfiles/vscode/settings.json /Users/chasestephens/Library/Application\ Support/Code/User/settings.json
+sh ./installvscodeextensions
 
 # ITERM2
 # Specify the preferences directory

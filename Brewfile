@@ -1,6 +1,5 @@
 # Taps
 tap 'homebrew/cask'
-tap 'homebrew/bundle'
 
 # Binaries
 brew 'awscli'
@@ -11,12 +10,16 @@ brew 'mackup'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
+brew 'stow'
+brew 'rbenv'
+brew 'nvm'
 
 # Development
 brew 'mysql'
 brew 'node'
 brew 'redis'
 brew 'yarn'
+brew 'zsh'
 brew 'zsh-completions'
 
 # Apps
@@ -32,6 +35,3 @@ cask 'slack'
 cask 'steam'
 cask 'sublime-text'
 cask 'visual-studio-code'
-
-# Formulae
-brew install stow
