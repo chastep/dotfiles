@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.config/oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -93,17 +93,15 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
 
 # ZSH Config aliases
-alias zshconfig="subl ~/.zshrc"
-alias ohmyzsh="subl ~/.oh-my-zsh"
+# alias zshconfig="subl ~/.zshrc"
+# alias ohmyzsh="subl ~/.oh-my-zsh"
 
-# ZSH aliases
-alias hellothere="~/.oh-my-zsh/custom/hellothere.zsh"
+# ZSH Custom aliases
+# alias hellothere="~/.oh-my-zsh/custom/hellothere.zsh"
 
-# Docker aliases
+# Visibly Docker aliases
 alias dc="docker-compose"
 alias ds="docker-sync"
 alias dcrun="docker-compose run --rm"
@@ -126,19 +124,13 @@ alias gamend="git commit --amend --no-edit"
 # Postgres aliases
 alias opsql='PGPASSWORD=opternative psql -h localhost -U opternative opternative_development'
 
-# Google shortcut
+# Opternative SYNC page Google shortcut
 alias sync="open -na 'Google Chrome' --args --new-window --incognito 'http://localhost:5000/sync'"
 
+# NVM settings
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# trying to copy the above for nvm but for pgvm
-# export PGVM_DIR="$HOME/.pgvm"
-# [ -s "$NVM_DIR/pgvm_env" ] && \. "$NVM_DIR/pgvm_env"  # This loads pgvm
-# source /Users/chasestephens/.pgvm/pgvm_env
-
-eval "$(rbenv init -)"
 
 # timestamp
 # https://superuser.com/questions/943844/add-timestamp-to-oh-my-zsh-robbyrussell-theme
