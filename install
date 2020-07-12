@@ -23,27 +23,29 @@ mkdir $HOME/workspace
 # Removes .gitconfig and .globabl-gitignore from $HOME (if it exists) and symlinks the files from the .dotfiles
 rm -rf $HOME/.gitconfig
 rm -rf $HOME/.global-gitignore
-touch $HOME/.gitconfig
-touch $HOME/.global-gitignore
 stow --ignore ".DS_Store" git
 
 # OH-MY-ZSH
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 rm -rf $HOME/.zshrc
-touch $HOME/.zshrc
-chsh -s /usr/local/bin/zsh
-stow --ignore ".DS_Store" zsh
+chsh -s $(which zsh)
+ln -s /Users/chasestephens/dotfiles/zsh/.zshrc /Users/chasestephens/.zshrc
 
 # SUBLIME
 stow --ignore ".DS_Store" sublime
 
 # VSCODE
 ln -s /Users/chasestephens/.dotfiles/vscode/settings.json /Users/chasestephens/Library/Application\ Support/Code/User/settings.json
-sh ./installvscodeextensions
+sh ./vscode/installvscodeextensions
 
 # ITERM2
 # Specify the preferences directory
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2/"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+# MAC STUFF
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1
 
 echo "Setup Complete!"
