@@ -131,6 +131,7 @@ alias sync="open -na 'Google Chrome' --args --new-window --incognito 'http://loc
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "$(brew --prefix nvm)/nvm.sh"
 
 # timestamp
 # https://superuser.com/questions/943844/add-timestamp-to-oh-my-zsh-robbyrussell-theme
