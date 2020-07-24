@@ -14,7 +14,7 @@
 		"/Users/chase/projects/referral-setup-script"
 	],
 	"last_version": 3211,
-	"last_window_id": 49,
+	"last_window_id": 51,
 	"log_indexing": false,
 	"settings":
 	{
@@ -294,6 +294,8 @@
 			},
 			"file_history":
 			[
+				"/Users/chase/Downloads/57ccecd0457e79ee3c4fe9bcd122d2d3dc031f8b95134a93b3ad71c503d1cd5d/alarm.js",
+				"/Users/chase/Downloads/028d3b15bdeb42497d243aa0d0c4421091a46f73b5a36a4f8e127a8d4594762f/alarm.js",
 				"/Users/chase/Downloads/data/100paths.json",
 				"/Users/chase/Downloads/data/searchPaths.json",
 				"/Users/chase/testing/shelltime/create_rails_app.sh",
@@ -419,9 +421,7 @@
 				"/Users/chase/projects/referral-frontend/src/components/account/SettingsForm.js",
 				"/Users/chase/projects/referral-frontend/src/components/company/CompanySettings.js",
 				"/Users/chase/projects/referral-frontend/src/components/ImageChooser.js",
-				"/Users/chase/projects/referral-frontend/src/components/ImageChooser.scss",
-				"/Users/chase/projects/referral-frontend/src/components/firmProfile/index.js",
-				"/Users/chase/projects/referral-frontend/src/assets/styles/dist-style.css"
+				"/Users/chase/projects/referral-frontend/src/components/ImageChooser.scss"
 			],
 			"find":
 			{
@@ -1082,6 +1082,14 @@
 			},
 			"buffers":
 			[
+				{
+					"file": "/Users/chase/Downloads/09173676c660283389895fe9414018988f03ba9139a8b2bbd8c22f12f6d0ff2f/alarm.js",
+					"settings":
+					{
+						"buffer_size": 1966,
+						"line_ending": "Unix"
+					}
+				}
 			],
 			"build_system": "",
 			"build_system_choices":
@@ -1179,6 +1187,8 @@
 			},
 			"file_history":
 			[
+				"/Users/chase/Downloads/57ccecd0457e79ee3c4fe9bcd122d2d3dc031f8b95134a93b3ad71c503d1cd5d/alarm.js",
+				"/Users/chase/Downloads/028d3b15bdeb42497d243aa0d0c4421091a46f73b5a36a4f8e127a8d4594762f/alarm.js",
 				"/Users/chase/Downloads/data/100paths.json",
 				"/Users/chase/Downloads/data/searchPaths.json",
 				"/Users/chase/testing/shelltime/create_rails_app.sh",
@@ -1304,9 +1314,7 @@
 				"/Users/chase/projects/referral-frontend/src/components/account/SettingsForm.js",
 				"/Users/chase/projects/referral-frontend/src/components/company/CompanySettings.js",
 				"/Users/chase/projects/referral-frontend/src/components/ImageChooser.js",
-				"/Users/chase/projects/referral-frontend/src/components/ImageChooser.scss",
-				"/Users/chase/projects/referral-frontend/src/components/firmProfile/index.js",
-				"/Users/chase/projects/referral-frontend/src/assets/styles/dist-style.css"
+				"/Users/chase/projects/referral-frontend/src/components/ImageChooser.scss"
 			],
 			"find":
 			{
@@ -1341,8 +1349,37 @@
 			"groups":
 			[
 				{
+					"selected": 0,
 					"sheets":
 					[
+						{
+							"buffer": 0,
+							"file": "/Users/chase/Downloads/09173676c660283389895fe9414018988f03ba9139a8b2bbd8c22f12f6d0ff2f/alarm.js",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1966,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
 					]
 				}
 			],
@@ -1817,7 +1854,7 @@
 			"template_settings":
 			{
 			},
-			"window_id": 49,
+			"window_id": 51,
 			"workspace_name": ""
 		}
 	],
