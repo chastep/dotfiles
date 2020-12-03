@@ -110,12 +110,18 @@ alias dcbash="dcrun web bash"
 alias dps="docker ps"
 alias da="docker attach"
 alias docker-scorch="dc stop && dc rm -f && ds stop && ds clean && dc build && ds start -f"
-alias docker-old-file="dcrun web bundle exec rake db:restore:file["tmp/database/$(ls -tR ./tmp/database | head -n1)"] && dcrun web bundle exec rake db:migrate && dc up"
+if [ -d "tmp/database/" ] 
+then
+  alias docker-old-file="dcrun web bundle exec rake db:restore:file["tmp/database/$(ls -tR ./tmp/database | head -n1)"] && dcrun web bundle exec rake db:migrate && dc up"
+fi
 alias docker-restore="dc stop && dc rm -f && ds stop && ds clean && dc build && ds start && docker-old-file"
 alias docker-new-sync="dc stop && dc rm -f && ds stop && ds clean && dc build && ds start && dcrun web bundle exec rake db:restore:s3[staging] && dcrun web bundle exec rake db:migrate && dc up"
 alias docker-new-npm="ds stop && ds clean && dc down && dcrun web npm install && docker-mig-sync"
 alias docker-new-file="dcrun web bundle exec rake db:restore:s3[staging] && dcrun web bundle exec rake db:migrate && dc up"
 alias docker-test-reload="dcrun -e RAILS_ENV=test web bundle exec rake db:reload"
+
+# Litify Docker aliases
+alias docrio-accounts="aws dynamodb scan --table-name OrganizationsTable --output text --query 'Items[*].[organizationId.S,organizationName.S,awsId.S]' --profile docrio-master"
 
 # Git aliases
 alias gdevp-rb="gco dev && git pull && gco - && git rebase -i dev"
@@ -126,6 +132,9 @@ alias opsql='PGPASSWORD=opternative psql -h localhost -U opternative opternative
 
 # Opternative SYNC page Google shortcut
 alias sync="open -na 'Google Chrome' --args --new-window --incognito 'http://localhost:5000/sync'"
+
+# rbenv settings
+eval "$(rbenv init -)"
 
 # NVM settings
 export NVM_DIR="$HOME/.nvm"
