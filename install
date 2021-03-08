@@ -31,9 +31,6 @@ rm -rf $HOME/.zshrc
 chsh -s $(which zsh)
 ln -s /Users/chasestephens/dotfiles/zsh/.zshrc /Users/chasestephens/.zshrc
 
-# SUBLIME
-stow --ignore ".DS_Store" sublime
-
 # VSCODE
 ln -s /Users/chasestephens/.dotfiles/vscode/settings.json /Users/chasestephens/Library/Application\ Support/Code/User/settings.json
 sh ./vscode/installvscodeextensions

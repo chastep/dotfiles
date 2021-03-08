@@ -15,5 +15,8 @@
     },
     "window.zoomLevel": 0,
     "eslint.alwaysShowStatus": true,
-    "eslint.format.enable": true
+    "eslint.format.enable": true,
+    "aws.samcli.location": "/usr/local/bin/sam",
+    "tabnine.experimentalAutoImports": true,
+    "editor.accessibilitySupport": "off"
 }
